@@ -7,9 +7,9 @@ class TimerPresetViewSet(viewsets.ModelViewSet):
     serializer_class = TimerPresetSerializer
 
     def get_queryset(self):
-        # Nejdřív vezmeme všechny záznamy
+        # vezmeme všechny záznamy
         queryset = super().get_queryset()
-        # Podíváme se, jestli v URL přišel parametr 'user' (např. /api/presets/?user=2)
+        # pokud přišel v URL parametr 'user' (např. /api/presets/?user=2)
         user_id = self.request.query_params.get('user')
         
         if user_id is not None:
