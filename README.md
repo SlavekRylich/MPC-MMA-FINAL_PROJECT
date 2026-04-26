@@ -33,7 +33,7 @@ Ve složce s backendem (např. `timer_api`) spusťte terminál:
 # Mac/Linux: source venv/bin/activate
 
 # Instalace závislostí
-pip install djangorestframework
+pip install -r requirements.txt
 
 # Aplikování databázových migrací
 python manage.py migrate
